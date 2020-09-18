@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/detailBus"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:layout_margin="5dp"
+    android:onClick="clickDetail"
+    app:cardCornerRadius="10dp">
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center|left"
+        app:srcCompat="@drawable/busus" />
+
+    <TextView
+        android:id="@+id/busCode"
+        android:layout_width="343dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/montserrat_alternates"
+        android:text="Name"
+        android:textColor="#040404"
+        android:textSize="20sp"
+        android:typeface="sans" />
+
+    <TextView
+        android:id="@+id/busMake"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/montserrat_alternates"
+        android:text="Assets"
+        android:textColor="#B5534C"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center|right"
+        app:srcCompat="@drawable/ic_baseline_arrow_right_24" />
+
+
+</androidx.cardview.widget.CardView>

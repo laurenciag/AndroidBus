@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisPage">
+
+        <TextView
+            android:id="@+id/textWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poly"
+            android:text="Register"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.116" />
+
+        <TextView
+            android:id="@+id/textDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoSizeTextType="uniform"
+            android:autoText="false"
+            android:fontFamily="@font/poly"
+            android:text="Please fill the details below"
+            android:textSize="8sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textWelcome"
+            app:layout_constraintVertical_bias="0.028" />
+
+
+    <EditText
+        android:id="@+id/inpFirstName"
+        android:layout_width="232dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:fontFamily="@font/reem_kufi"
+        android:hint="First Name"
+        android:inputType="textPersonName"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textDetails"
+        app:layout_constraintVertical_bias="0.033" />
+
+    <EditText
+        android:id="@+id/inpEmail"
+        android:layout_width="232dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:fontFamily="@font/reem_kufi"
+        android:hint="Email Address"
+        android:inputType="textEmailAddress"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textDetails"
+        app:layout_constraintVertical_bias="0.206" />
+
+
+    <EditText
+        android:id="@+id/inpAgencyName"
+        android:layout_width="232dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:fontFamily="@font/reem_kufi"
+        android:hint="Agency Name"
+        android:inputType="textPersonName"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textDetails"
+        app:layout_constraintVertical_bias="0.55" />
+
+    <EditText
+        android:id="@+id/inpAgencyDetail"
+        android:layout_width="232dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:fontFamily="@font/reem_kufi"
+        android:hint="Agency Detail"
+        android:inputType="textLongMessage|textPersonName"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textDetails"
+        app:layout_constraintVertical_bias="0.468" />
+
+    <EditText
+        android:id="@+id/inpLastName"
+        android:layout_width="232dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:fontFamily="@font/reem_kufi"
+        android:hint="Last Name"
+        android:inputType="textPersonName"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textDetails"
+        app:layout_constraintVertical_bias="0.12" />
+
+    <EditText
+        android:id="@+id/inpPassword"
+        android:layout_width="232dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/inpAgencyName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inpEmail"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/inpMobileNumber"
+        android:layout_width="232dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:fontFamily="@font/reem_kufi"
+        android:hint="Mobile Number"
+        android:inputType="textPersonName"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textDetails"
+        app:layout_constraintVertical_bias="0.381" />
+
+    <Button
+        android:id="@+id/btnRegis"
+        style="@android:style/Widget.Material.Light.Button"
+        android:layout_width="233dp"
+        android:layout_height="39dp"
+        android:backgroundTint="#D5D1DA"
+        android:fontFamily="@font/poly"
+        android:outlineProvider="paddedBounds"
+        android:text="Register"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent" />
+         />
+</androidx.constraintlayout.widget.ConstraintLayout>
