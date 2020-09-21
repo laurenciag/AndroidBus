@@ -14,6 +14,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.finalProjectAndroid.Entity.Bus;
+import com.example.finalProjectAndroid.Fragment.BusFragment;
 import com.example.finalProjectAndroid.Fragment.DetailBusFragment;
 import com.example.finalProjectAndroid.HomePage;
 import com.example.finalProjectAndroid.R;
@@ -51,9 +52,9 @@ public class BusAdapter extends RecyclerView.Adapter<ListBusViewHolder> {
         holder.detailBus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(view.getContext(),buses.get(position).getId(), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(view.getContext(),buses.get(position).getId(), Toast.LENGTH_SHORT).show();
 
-                Fragment fragmentDetail = new DetailBusFragment(viewGroup.getContext(),buses.get(position).getId());
+                Fragment fragmentDetail = new DetailBusFragment(viewGroup.getContext(), buses.get(position).getId());
                 fragmentManager.beginTransaction().replace(R.id.layoutFragment, fragmentDetail).commit();
                 //lempar dataya pake bundle( kirim di constructor fragment aja)
 

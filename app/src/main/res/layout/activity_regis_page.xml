@@ -25,19 +25,21 @@
 
     <TextView
         android:id="@+id/textDetails"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="170dp"
+        android:layout_height="14dp"
         android:autoSizeTextType="uniform"
         android:autoText="false"
         android:fontFamily="@font/poly"
         android:text="Please fill the details below"
         android:textSize="8sp"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textWelcome"
         app:layout_constraintVertical_bias="0.046" />
+
 
 
     <EditText
@@ -173,6 +175,7 @@
         style="@android:style/Widget.Material.Light.Button"
         android:layout_width="233dp"
         android:layout_height="39dp"
+        android:layout_marginTop="48dp"
         android:background="@drawable/rounded_button"
         android:backgroundTint="#A9CCE8"
         android:fontFamily="@font/poly"
@@ -183,8 +186,9 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inpMobileNumber"
-        app:layout_constraintVertical_bias="0.19" />
+        app:layout_constraintVertical_bias="0.0" />
     />
 </androidx.constraintlayout.widget.ConstraintLayout>

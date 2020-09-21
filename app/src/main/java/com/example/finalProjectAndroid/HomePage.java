@@ -81,15 +81,14 @@ public class HomePage extends AppCompatActivity implements BottomNavigationView.
 //        Log.d("test", "activity");
 //    }
 
-    public void clickLogout(View v){
+    public void logoutClick(View v){
         sessionManager.removeToken();
-        new CustomActivity(HomePage.this).startAndDestroy(LoginPage.class);
-//        Intent intent = new Intent(HomePage.this, LoginPage.class);
-//        startActivity(intent);
+        new CustomActivity(this).startAndDestroy(LoginPage.class);
     }
 
-    public  void clickList(View v){
-        new CustomActivity(HomePage.this).start(BusFragment.class);
-    }
-
+//    public void backClick(View v){
+//        Fragment fragment = new BusFragment(this);
+//        FragmentManager fragmentManager = getSupportFragmentManager();
+//        fragmentManager.beginTransaction().replace(R.id.detailBus, fragment).commit();
+//    }
 }

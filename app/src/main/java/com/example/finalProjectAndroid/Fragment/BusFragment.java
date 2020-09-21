@@ -39,14 +39,21 @@ public class BusFragment extends Fragment {
     UtilHelper utilHelper;
     RecyclerView recyclerView;
     Activity activity;
+    Context ctx;
     Fragment fragment;
 
-    public BusFragment(Activity activity) {
-        // Required empty public constructor
-        this.sessionManager = new SessionManager(activity.getApplicationContext());
+//    public BusFragment(Activity activity) {
+//        // Required empty public constructor
+//        this.sessionManager = new SessionManager(activity.getApplicationContext());
+//        this.busUtil = new BusUtil();
+//        this.activity = activity;
+//    }
+
+    public BusFragment(Context ctx) {
+        this.ctx = ctx;
+        this.sessionManager = new SessionManager(ctx);
         this.busUtil = new BusUtil();
-        this.activity = activity;
-    }
+    };
 
 
     @Override
@@ -76,7 +83,7 @@ public class BusFragment extends Fragment {
                         BusAdapter busAdapter = new BusAdapter(buses,getFragmentManager());
 
 
-                        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(activity.getApplicationContext());
+                        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(ctx.getApplicationContext());
                         recyclerView.setHasFixedSize(true);
                         recyclerView.setLayoutManager(mLayoutManager);
 //                        recyclerView.addItemDecoration(new DividerItemDecoration(activity.getApplicationContext(),LinearLayoutManager.VERTICAL));

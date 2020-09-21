@@ -56,6 +56,7 @@ public class LoginPage extends AppCompatActivity {
         (new UserUtil()).getUser().login(rBodyEmail, rBodyPassword).enqueue(new Callback<String>() {
             @Override
             public void onResponse(Call<String> call, Response<String> response) {
+                Log.d("Login Response", response.body());
 //                Toast.makeText(LoginPage.this, response.body(), Toast.LENGTH_SHORT).show();
                 try {
                     if (sessionManager.setSession(response.body())) {
@@ -65,6 +66,7 @@ public class LoginPage extends AppCompatActivity {
 //                        startActivity(loginPage);
                     }
                     else {
+                        Log.d("Login:", "Failed");
                         Toast.makeText(getApplicationContext(),"Email or Password invalid!", Toast.LENGTH_SHORT).show();
                     }
                 } catch (JSONException e) {

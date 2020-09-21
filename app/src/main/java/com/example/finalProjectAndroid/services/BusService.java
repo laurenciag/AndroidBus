@@ -15,6 +15,7 @@ import retrofit2.http.Part;
 public interface BusService {
     @Multipart
     @POST("bus/getAllBusByAgencyId")
+//    @POST ("/getAllBus")
     Call<List<Bus>> getBusByAgencyId(@Part("agencyId")RequestBody AgencyId);
 
     @Multipart

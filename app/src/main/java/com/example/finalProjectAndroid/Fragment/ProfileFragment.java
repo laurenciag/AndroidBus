@@ -14,6 +14,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.finalProjectAndroid.Entity.User;
+import com.example.finalProjectAndroid.Helper.CustomActivity;
 import com.example.finalProjectAndroid.HomePage;
 import com.example.finalProjectAndroid.LoginPage;
 import com.example.finalProjectAndroid.R;
@@ -29,8 +30,7 @@ import retrofit2.Response;
 
 public class ProfileFragment extends Fragment {
 
-    ImageButton logoutBtn;
-    TextView firstName, lastName, email, mobileNumber;
+    TextView firstName, lastName, email, mobileNumber, name,logoutBtn;
     UserUtil userUtil;
     SessionManager sessionManager;
     Context context;
@@ -55,12 +55,9 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View mView = inflater.inflate(R.layout.fragment_profile, container, false);
-        logoutBtn = mView.findViewById(R.id.logoutBtn);
-        firstName = mView.findViewById(R.id.firstName);
-        lastName = mView.findViewById(R.id.lastName);
+        name = mView.findViewById(R.id.name);
         email = mView.findViewById(R.id.email);
-        mobileNumber = mView.findViewById(R.id.mobileNunber);
-        // Inflate the layout for this fragment
+        mobileNumber = mView.findViewById(R.id.mobileNumber);
         return mView;
     }
 
@@ -71,10 +68,10 @@ public class ProfileFragment extends Fragment {
         userUtil.getUser().getUserById(rBody).enqueue(new Callback<User>() {
             @Override
             public void onResponse(Call<User> call, Response<User> response) {
-                firstName.setText(response.body().getFirstName());
-                lastName.setText(response.body().getLastName());
-                email.setText(response.body().getEmail());
-                mobileNumber.setText(response.body().getMobileNumber());
+                User user = response.body();
+                name.setText(user.getFirstName()+ " " + user.getLastName());
+                email.setText(user.getEmail());
+                mobileNumber.setText(user.getMobileNumber());
             }
 
             @Override

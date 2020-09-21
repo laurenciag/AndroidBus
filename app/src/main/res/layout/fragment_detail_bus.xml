@@ -1,93 +1,158 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:weightSum="100"
     android:orientation="vertical"
     tools:context="com.example.finalProjectAndroid.Fragment.DetailBusFragment">
 
-    <!-- TODO: Update blank fragment layout -->
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="match_parent"
-        android:layout_height="377dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.115"
-        app:srcCompat="@drawable/businside"
-        tools:layout_editor_absoluteX="0dp" />
+        <!-- TODO: Update blank fragment layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/busText"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_weight="5"
-        android:fontFamily="@font/montserrat_alternates"
-        android:text="Here's your Bus Detail:"
-        android:textColor="#000000"
-        android:textSize="24sp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="378dp" />
 
-    <TextView
-        android:layout_width="414dp"
-        android:layout_height="31dp"
-        android:layout_weight="2"
-        android:fontFamily="@font/montserrat_alternates"
-        android:gravity="center"
-        android:text="Bus Code:"
-        android:textColor="#3B4161"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.035" />
-
-    <TextView
-        android:id="@+id/busCodeDetail"
-        android:layout_width="403dp"
-        android:layout_height="36dp"
-        android:layout_weight="2"
-        android:fontFamily="@font/montserrat_alternates"
-        android:gravity="center"
-        android:text="Test bus code"
-        android:textColor="#3B4161"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.66" />
-
-    <TextView
-        android:layout_width="411dp"
-        android:layout_height="38dp"
-        android:layout_weight="2"
-        android:fontFamily="@font/montserrat_alternates"
-        android:gravity="center"
-        android:text="Bus Model"
-        android:textColor="#2196F3"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.766" />
-
-    <TextView
-        android:id="@+id/busMakeDetail"
-        android:layout_width="416dp"
-        android:layout_height="35dp"
-        android:layout_weight="2"
-        android:fontFamily="@font/montserrat_alternates"
-        android:gravity="center"
-        android:text="Test bus make"
-        android:textColor="#2196F3"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.6"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.817" />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp">
 
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="377dp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/businside" />
+
+                <ImageView
+                    android:id="@+id/backToHome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/arrow_back" />
+
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/busText"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="5"
+                    android:fontFamily="@font/montserrat_alternates"
+                    android:text="Here's your Bus Detail:"
+                    android:textColor="#000000"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.48"
+                    tools:layout_editor_absoluteX="-3dp" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="414dp"
+                    android:layout_height="31dp"
+                    android:layout_weight="2"
+                    android:fontFamily="@font/montserrat_alternates"
+                    android:gravity="center"
+                    android:text="Bus Code:"
+                    android:textColor="#3B4161"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView2"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/busCodeDetail"
+                    android:layout_width="409dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="2"
+                    android:fontFamily="@font/montserrat_alternates"
+                    android:gravity="center"
+                    android:text="Test bus code"
+                    android:textColor="#3B4161"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.587" />
+
+                <TextView
+                    android:layout_width="411dp"
+                    android:layout_height="38dp"
+                    android:layout_weight="2"
+                    android:fontFamily="@font/montserrat_alternates"
+                    android:gravity="center"
+                    android:text="Bus Model"
+                    android:textColor="#2196F3"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.67" />
+
+                <TextView
+                    android:id="@+id/busMakeDetail"
+                    android:layout_width="406dp"
+                    android:layout_height="29dp"
+                    android:layout_weight="2"
+                    android:fontFamily="@font/montserrat_alternates"
+                    android:gravity="center"
+                    android:text="Test bus make"
+                    android:textColor="#2196F3"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.6"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.716" />
+
+                <TextView
+                    android:layout_width="411dp"
+                    android:layout_height="38dp"
+                    android:layout_weight="2"
+                    android:fontFamily="@font/montserrat_alternates"
+                    android:gravity="center"
+                    android:text="Bus Capacity"
+                    android:textColor="#419744"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.813" />
+
+                <TextView
+                    android:id="@+id/busCapacity"
+                    android:layout_width="412dp"
+                    android:layout_height="32dp"
+                    android:layout_weight="2"
+                    android:fontFamily="@font/montserrat_alternates"
+                    android:gravity="center"
+                    android:text="Test bus capacity"
+                    android:textColor="#419744"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.861" />
+
+            </LinearLayout>
+        </LinearLayout>
+</FrameLayout>

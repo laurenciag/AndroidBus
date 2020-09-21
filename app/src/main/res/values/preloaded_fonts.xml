@@ -7,5 +7,7 @@
         <item>@font/poly</item>
         <item>@font/questrial</item>
         <item>@font/reem_kufi</item>
+        <item>@font/roboto</item>
+        <item>@font/roboto_black</item>
     </array>
 </resources>

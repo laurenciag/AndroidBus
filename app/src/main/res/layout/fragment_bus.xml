@@ -1,35 +1,56 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/fragmentBus"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.finalProjectAndroid.Fragment.BusFragment">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:weightSum="100"
-        >
+        android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_width="393dp"
-            android:layout_height="52dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="15dp"
-            android:layout_weight="10"
-            android:fontFamily="@font/poly"
-            android:text="Please select your Bus"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/listBus"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="40dp"
-            />
-        <!-- TODO: Update blank fragment layout -->
+            android:orientation="vertical">
 
-    </LinearLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/destination" />
+
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:fontFamily="@font/poly"
+                android:gravity="center|center_vertical"
+                android:text="Please select your Bus"
+                android:textColor="#131111"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/listBus"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+            </LinearLayout>
+
+            <!-- TODO: Update blank fragment layout -->
+
+        </LinearLayout>
+    </ScrollView>
 </FrameLayout>

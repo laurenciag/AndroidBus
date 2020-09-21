@@ -1,7 +1,9 @@
 package com.example.finalProjectAndroid.ViewHolder;
 
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -20,11 +22,13 @@ import java.util.List;
 public class ListBusViewHolder extends RecyclerView.ViewHolder {
     public TextView busCode, busMake;
     public CardView detailBus;
+    public ImageView backToHome;
 
     public ListBusViewHolder(@NonNull View itemView) {
         super(itemView);
         this.busCode = itemView.findViewById(R.id.busCode);
         this.busMake = itemView.findViewById(R.id.busMake);
         this.detailBus = itemView.findViewById(R.id.detailBus);
+        this.backToHome = itemView.findViewById(R.id.backToHome);
     }
 }
