@@ -38,6 +38,7 @@ public class RegisPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_regis_page);
         userUtil = new UserUtil();
 
@@ -124,7 +125,7 @@ public class RegisPage extends AppCompatActivity {
                 String agencyName = ((EditText) findViewById(R.id.inpAgencyName)).getText().toString();
                 String agencyDetail = ((EditText) findViewById(R.id.inpAgencyName)).getText().toString();
                 Agency agency = new Agency(agencyName, agencyDetail, userRsp.getId());
-//                agency.setUserId(userRsp.getId());
+                agency.setOwner(userRsp.getId());
 
                 agencyUtil.getAgency().createAgency(agency).enqueue(new Callback<Agency>() {
                     @Override
@@ -135,6 +136,7 @@ public class RegisPage extends AppCompatActivity {
 
                     @Override
                     public void onFailure(Call<Agency> call, Throwable t) {
+                        Log.d("failed", t.getMessage());
                         Toast.makeText(getApplicationContext(), t.getMessage(), Toast.LENGTH_LONG).show();
 
                     }

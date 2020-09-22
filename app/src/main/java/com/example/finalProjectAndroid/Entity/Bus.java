@@ -5,7 +5,7 @@ public class Bus {
     private String code;
     private String capacity;
     private String make;
-    private String agencyId;
+    private String agency;
 
     public Bus() {
     }
@@ -15,7 +15,7 @@ public class Bus {
         this.code = code;
         this.capacity = capacity;
         this.make = make;
-        this.agencyId = agencyId;
+        this.agency = agencyId;
     }
 
     public String getId() {
@@ -50,11 +50,11 @@ public class Bus {
         this.make = make;
     }
 
-    public String getAgencyId() {
-        return agencyId;
+    public String getAgency() {
+        return agency;
     }
 
-    public void setAgencyId(String agencyId) {
-        this.agencyId = agencyId;
+    public void setAgency(String agency) {
+        this.agency = agency;
     }
 }

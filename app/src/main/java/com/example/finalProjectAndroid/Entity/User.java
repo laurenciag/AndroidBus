@@ -7,9 +7,9 @@ public class User {
     private String firstName;
     private String lastName;
     private String mobileNumber;
-    private String roleId;
-    private long createdDate;
-    private long lastUpdatedDate;
+    private String roles;
+//    private long createdDate;
+//    private long lastUpdatedDate;
 
     public User(String firstName, String lastName, String password, String mobileNumber, String email) {
         this.email = email;
@@ -29,9 +29,9 @@ public class User {
         this.firstName = firstName;
         this.lastName = lastName;
         this.mobileNumber = mobileNumber;
-        this.roleId = roleId;
-        this.createdDate = createdDate;
-        this.lastUpdatedDate = lastUpdatedDate;
+        this.roles = roleId;
+//        this.createdDate = createdDate;
+//        this.lastUpdatedDate = lastUpdatedDate;
     }
 
     public String getId() {
@@ -82,29 +82,29 @@ public class User {
         this.mobileNumber = mobileNumber;
     }
 
-    public String getRoleId() {
-        return roleId;
+    public String getRoles() {
+        return roles;
     }
 
-    public void setRoleId(String roleId) {
-        this.roleId = roleId;
+    public void setRoles(String roles) {
+        this.roles = roles;
     }
 
-    public long getCreatedDate() {
-        return createdDate;
-    }
-
-    public void setCreatedDate(long createdDate) {
-        this.createdDate = createdDate;
-    }
-
-    public long getLastUpdatedDate() {
-        return lastUpdatedDate;
-    }
-
-    public void setLastUpdatedDate(long lastUpdatedDate) {
-        this.lastUpdatedDate = lastUpdatedDate;
-    }
+//    public long getCreatedDate() {
+//        return createdDate;
+//    }
+//
+//    public void setCreatedDate(long createdDate) {
+//        this.createdDate = createdDate;
+//    }
+//
+//    public long getLastUpdatedDate() {
+//        return lastUpdatedDate;
+//    }
+//
+//    public void setLastUpdatedDate(long lastUpdatedDate) {
+//        this.lastUpdatedDate = lastUpdatedDate;
+//    }
 
     @Override
     public String toString() {

@@ -3,26 +3,26 @@ package com.example.finalProjectAndroid.Entity;
 public class Agency {
     private String id;
     private String code;
-    private String name;
-    private String details;
-    private String userId;
-    private long createdDate;
-    private long updatedDate;
+    private String agencyName;
+    private String agencyDetails;
+    private String owner;
+//    private long createdDate;
+//    private long updatedDate;
 
     public Agency(String name, String details, String userId) {
-        this.name = name;
-        this.details = details;
-        this.userId = userId;
+        this.agencyName = name;
+        this.agencyDetails = details;
+        this.owner = userId;
     }
 
     public Agency(String id, String code, String name, String details, String userId, long createdDate, long updatedDate) {
         this.id = id;
         this.code = code;
-        this.name = name;
-        this.details = details;
-        this.userId = userId;
-        this.createdDate = createdDate;
-        this.updatedDate = updatedDate;
+        this.agencyName = name;
+        this.agencyDetails = details;
+        this.owner = userId;
+//        this.createdDate = createdDate;
+//        this.updatedDate = updatedDate;
     }
 
     public Agency() {
@@ -44,44 +44,44 @@ public class Agency {
         this.code = code;
     }
 
-    public String getName() {
-        return name;
+    public String getAgencyName() {
+        return agencyName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setAgencyName(String agencyName) {
+        this.agencyName = agencyName;
     }
 
-    public String getDetails() {
-        return details;
+    public String getAgencyDetails() {
+        return agencyDetails;
     }
 
-    public void setDetails(String details) {
-        this.details = details;
+    public void setAgencyDetails(String agencyDetails) {
+        this.agencyDetails = agencyDetails;
     }
 
-    public String getUserId() {
-        return userId;
+    public String getOwner() {
+        return owner;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setOwner(String owner) {
+        this.owner = owner;
     }
 
-    public long getCreatedDate() {
-        return createdDate;
-    }
-
-    public void setCreatedDate(long createdDate) {
-        this.createdDate = createdDate;
-    }
-
-    public long getUpdatedDate() {
-        return updatedDate;
-    }
-
-    public void setUpdatedDate(long updatedDate) {
-        this.updatedDate = updatedDate;
-    }
+//    public long getCreatedDate() {
+//        return createdDate;
+//    }
+//
+//    public void setCreatedDate(long createdDate) {
+//        this.createdDate = createdDate;
+//    }
+//
+//    public long getUpdatedDate() {
+//        return updatedDate;
+//    }
+//
+//    public void setUpdatedDate(long updatedDate) {
+//        this.updatedDate = updatedDate;
+//    }
 
 }

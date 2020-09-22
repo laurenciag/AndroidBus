@@ -9,15 +9,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.finalProjectAndroid.Entity.Agency;
-import com.example.finalProjectAndroid.Entity.JWToken;
 import com.example.finalProjectAndroid.R;
 import com.example.finalProjectAndroid.Util.AgencyUtil;
 import com.example.finalProjectAndroid.Util.SessionManager;
-
-import org.w3c.dom.Text;
 
 import okhttp3.MediaType;
 import okhttp3.RequestBody;
@@ -69,8 +65,8 @@ public class AgencyFragment extends Fragment {
             @Override
             public void onResponse(Call<Agency> call, Response<Agency> response) {
 //                agName = getActivity().findViewById(R.id.agName).setText();
-                agName.setText(response.body().getName());
-                agDetail.setText(response.body().getDetails());
+                agName.setText(response.body().getAgencyName());
+                agDetail.setText(response.body().getAgencyDetails());
 
 //                ((TextView) getActivity().findViewById(R.id.agName)).setText(response.body().getName());
             }

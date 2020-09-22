@@ -172,7 +172,6 @@
 
     <Button
         android:id="@+id/btnRegis"
-        style="@android:style/Widget.Material.Light.Button"
         android:layout_width="233dp"
         android:layout_height="39dp"
         android:layout_marginTop="48dp"
