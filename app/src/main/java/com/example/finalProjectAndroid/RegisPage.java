@@ -141,7 +141,9 @@ public class RegisPage extends AppCompatActivity {
 
                     }
                 });
-                Toast.makeText(getApplicationContext(), response.body().toString(), Toast.LENGTH_LONG).show();
+//                Toast.makeText(getApplicationContext(), response.body().toString(), Toast.LENGTH_LONG).show();
+                Log.d("Regis Success", response.body().toString());
+                Toast.makeText(getApplicationContext(), "Register Success!", Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -173,16 +175,10 @@ public class RegisPage extends AppCompatActivity {
         });
     }
 
-//    public boolean confirmPassword(String password, CharSequence rePassword) {
-//        Pattern pattern = Pattern.compile(password, Pattern.CASE_INSENSITIVE);
-//        Matcher match = pattern.matcher(rePassword);
-//
-//        if (!match.matches()) {
-//            Toast.makeText(getApplicationContext(), "Password does not match", Toast.LENGTH_LONG).show();
-//            return false;
-//        }
-//        return true;
-//    }
+    public void loginClickPage(View v){
+        Intent intent = new Intent(RegisPage.this, LoginPage.class);
+        startActivity(intent);
+    }
 
 
 }

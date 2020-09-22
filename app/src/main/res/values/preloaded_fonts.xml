@@ -9,5 +9,6 @@
         <item>@font/reem_kufi</item>
         <item>@font/roboto</item>
         <item>@font/roboto_black</item>
+        <item>@font/roboto_black_italic</item>
     </array>
 </resources>
